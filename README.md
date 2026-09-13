@@ -4,6 +4,16 @@ Indexer plugins for [BookOrbit](https://github.com/bookorbit/bookorbit) covering
 sources that publish public domain works and ask nothing for them. BookOrbit ships the loader; these
 are plugins, maintained separately.
 
+Every plugin publishes signed updates. The private Ed25519 key stays outside the repository. After
+changing a plugin version, regenerate its manifest before publishing:
+
+```sh
+BOOKORBIT_PLUGIN_SIGNING_KEY=/path/to/private-key.pem node scripts/sign-update.mjs <plugin>
+```
+
+The manifest signs the exact `index.mjs` bytes. BookOrbit verifies its SHA-256 and signature before
+offering or automatically installing an update.
+
 | Plugin                | Media      | Credential | Source                                                           |
 | --------------------- | ---------- | ---------- | ---------------------------------------------------------------- |
 | **librivox**          | audiobooks | none       | Public domain audiobooks read by volunteers                      |
@@ -23,8 +33,9 @@ Copy a plugin's directory into BookOrbit's app data and restart:
 is needed at runtime; `verify.mjs` and `fixtures/` are development files.
 
 After the restart the plugin appears in the indexer type list under **Settings > System > Requests**
-and is configured like any other indexer. Nothing is enabled until you add it there. There is no hot
-reload, and a plugin that fails to load is reported at the top of that page.
+and is configured like any other indexer. Browser installs and signed updates activate immediately.
+Nothing is enabled until you add it there, and a plugin that fails to load is reported at the top of
+that page.
 
 ## Trust
 

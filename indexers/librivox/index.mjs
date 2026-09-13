@@ -94,7 +94,11 @@ const LANGUAGE_BY_NAME = {
 
 export default {
   apiVersion: 1,
-  version: '1.0.0',
+  version: '1.0.1',
+  update: {
+    manifestUrl: 'https://raw.githubusercontent.com/orbit-plugins/bookorbit-open-plugins/main/updates/librivox.json',
+    ed25519PublicKey: 'xifEwwGulukbjKtXn-ArR6BgJaOk6BUzfO97cZMt6gA',
+  },
   type: 'librivox',
   label: 'LibriVox',
   requiresCredential: false,

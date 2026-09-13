@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "type": "project-gutenberg",
+  "version": "1.0.1",
+  "sourceUrl": "https://raw.githubusercontent.com/orbit-plugins/bookorbit-open-plugins/main/indexers/project-gutenberg/index.mjs",
+  "sha256": "d73e097dd582ad07af6abfe95af09fe1a98eeecd65020e17562b3d05e00a18c1",
+  "signature": "tHtLyPM5mJRswZeHzZ8RNsPOHHmKNmE8tiP6qhmJxt8G5HMdPRi/9G8bOIRw4hQbgjp+lUoK+n0ZaoUYrUDfCQ=="
+}
