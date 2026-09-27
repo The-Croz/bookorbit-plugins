@@ -1,7 +1,6 @@
 # BookOrbit open library plugins
 
-Indexer plugins for [BookOrbit](https://github.com/bookorbit/bookorbit) covering open libraries:
-sources that publish public domain works and ask nothing for them. BookOrbit ships the loader; these
+Indexer plugins for [BookOrbit](https://github.com/bookorbit/bookorbit). BookOrbit ships the loader; these
 are plugins, maintained separately.
 
 Every plugin publishes signed updates. The private Ed25519 key stays outside the repository. After
